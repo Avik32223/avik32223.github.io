@@ -1,0 +1,89 @@
+// Apply a natural box layout model to all elements
+// but allowing components to change
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+@import "./burger.scss";
+@import "./pages.scss";
+
+$primary-bg: #1b1a25;
+
+li,
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  display: block;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  outline: none;
+  border: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+textarea {
+  overflow: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a,
+iframe,
+img,
+svg,
+video {
+  display: block;
+}
+
+iframe,
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+.content-body,
+.content-body .intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content-body .intro {
+  z-index: 20;
+  background-color: #1b1a25;
+  // background-image: url(/static/media/img/home/intro/img.jpg);
+  background-size: cover;
+  background-position: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+}

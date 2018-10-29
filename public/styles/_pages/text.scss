@@ -1,0 +1,58 @@
+.project-role {
+  position: absolute;
+  bottom: 120px;
+  left: 120px;
+}
+
+.project-agency {
+  position: absolute;
+  bottom: 120px;
+  left: 260px;
+}
+
+.project-year {
+  position: absolute;
+  bottom: 120px;
+  left: 400px;
+}
+
+.project-value-title {
+  font-family: absolut-thin;
+  color: #181829;
+  letter-spacing: 1.6px;
+  font-size: calc(0.4rem + 0.5vw);
+}
+
+.project-value-wrap {
+  position: relative;
+  margin: 3px 0 0;
+  width: 8.33vw;
+  font-size: calc(0.4rem + 0.4vw);
+}
+
+.project-value {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #a3adb9;
+  line-height: 150%;
+}
+
+.project-image-wrap {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: -15%;
+  top: 50%;
+  transform: translateY(-45%);
+}
+
+.project-image {
+  width: 50vw;
+}
+
+.project-image-1-b {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

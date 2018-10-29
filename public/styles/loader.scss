@@ -1,0 +1,127 @@
+$primary-bg: #1b1a25;
+
+@font-face {
+  font-family: "source-serif-pro";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/public/fonts/SourceSerifPro.otf");
+}
+
+@font-face {
+  font-family: "absolut-thin";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/public/fonts/Absolut_Pro_ThinCondensed.otf");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+body,
+div,
+footer,
+form,
+h1,
+h2,
+h3,
+header,
+html,
+img,
+input,
+label,
+li,
+nav,
+p,
+select,
+span,
+table,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 100%;
+  font: inherit;
+  font-size: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #1b1a25;
+  z-index: 999999;
+}
+
+.hidden {
+  display: none;
+}
+
+.loader {
+  position: fixed;
+  z-index: 9000;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.loader,
+.loader-bg {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.loader-bg {
+  position: absolute;
+  background: $primary-bg;
+}
+
+.loader-svg,
+.loader-svg-wrap {
+  position: relative;
+}
+
+.loader-svg-wrap {
+  width: 68.2vw;
+  height: 33.2vw;
+}
+
+.loader-svg {
+  width: 68.2vw;
+  height: 33.2vw;
+}

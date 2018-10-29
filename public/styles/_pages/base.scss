@@ -1,0 +1,56 @@
+$primary: #1b1a25;
+
+@mixin fill-absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.intro,
+.showcase,
+.resume,
+.social {
+  @include fill-absolute();
+}
+
+.resume {
+  background: $primary;
+}
+
+.social {
+  background: $primary;
+}
+
+.content-body {
+  @include fill-absolute();
+}
+
+.showcase {
+  @include fill-absolute();
+  z-index: 1;
+}
+
+.project-name-wrap {
+  position: absolute;
+  color: #ef5350;
+  width: 30vw;
+  letter-spacing: 0.5px;
+  font-family: absolut-thin;
+  font-size: calc(0.7rem + 0.8vw);
+  text-align: center;
+  top: 40px;
+  line-height: 44px;
+  height: 44px;
+  left: calc(2.1vw + 60px);
+
+  .project-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+  }
+}
