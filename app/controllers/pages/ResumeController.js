@@ -13,7 +13,7 @@ export default class ResumeController extends BaseController {
         targets: this.page,
         translateY: "0%",
         easing: "easeInQuad",
-        duration: 450,
+        duration: 0,
       }).finished.then(() => {
         return true;
       });
@@ -28,7 +28,7 @@ export default class ResumeController extends BaseController {
         targets: this.page,
         translateY: translateY,
         easing: "easeInQuad",
-        duration: 450,
+        duration: 0,
       }).finished.then(() => {
         return true;
       });

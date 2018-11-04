@@ -97,6 +97,33 @@ export default class ShowcaseController extends BaseController {
     return sequence;
   }
 
+  getProjectImageEnterSequence({ toPage }) {
+    const sequence = [];
+    if (toPage && this.entryPages.indexOf(toPage) >= 0) {
+      sequence.push(
+        getDefaultAnimatePropertySequence(
+          [`.project-image-${toPage}-a`, `.project-image-${toPage}-b`],
+          {
+            translateX: "0%",
+            offset: 0,
+            duration: 650,
+          },
+        ),
+      );
+      sequence.push(
+        getDefaultAnimatePropertySequence(
+          [`.project-image-${toPage}-a`, `.project-image-${toPage}-b`],
+          {
+            opacity: 1,
+            offset: 200,
+            duration: 250,
+          },
+        ),
+      );
+    }
+    return sequence;
+  }
+
   getProjectRoleAgencyYearEnterSequence({ toPage }) {
     const sequence = [];
     if (toPage && this.entryPages.indexOf(toPage) >= 0) {
@@ -219,6 +246,33 @@ export default class ShowcaseController extends BaseController {
     return sequence;
   }
 
+  getProjectImageExitSequence({ fromPage, toPage }) {
+    const sequence = [];
+    if (fromPage && this.entryPages.indexOf(fromPage) >= 0) {
+      sequence.push(
+        getDefaultAnimatePropertySequence(
+          [`.project-image-${fromPage}-a`, `.project-image-${fromPage}-b`],
+          {
+            translateX: "50%",
+            offset: 0,
+            duration: 650,
+          },
+        ),
+      );
+      sequence.push(
+        getDefaultAnimatePropertySequence(
+          [`.project-image-${fromPage}-a`, `.project-image-${fromPage}-b`],
+          {
+            opacity: 0,
+            offset: 50,
+            duration: 250,
+          },
+        ),
+      );
+    }
+    return sequence;
+  }
+
   getProjectRoleAgencyYearExitSequence({ fromPage, toPage }) {
     const sequence = [];
     if (fromPage && this.entryPages.indexOf(fromPage) >= 0) {
@@ -305,6 +359,7 @@ export default class ShowcaseController extends BaseController {
     const frameSequence = this.getFrameEnterSequence(options);
     const projectNameSequence = this.getProjectNameEnterSequence(options);
     const projectButtonSequence = this.getProjectButtonEnterSequence(options);
+    const projectImageSequence = this.getProjectImageEnterSequence(options);
     const projectRoleAgencyYearSequence = this.getProjectRoleAgencyYearEnterSequence(
       options,
     );
@@ -312,6 +367,7 @@ export default class ShowcaseController extends BaseController {
       frameSequence,
       projectNameSequence,
       projectButtonSequence,
+      projectImageSequence,
       projectRoleAgencyYearSequence,
     ].filter(e => e.length);
 
@@ -334,6 +390,7 @@ export default class ShowcaseController extends BaseController {
     const frameSequence = this.getFrameExitSequence(options);
     const projectNameSequence = this.getProjectNameExitSequence(options);
     const projectButtonSequence = this.getProjectButtonExitSequence(options);
+    const projectImageSequence = this.getProjectImageExitSequence(options);
     const projectRoleAgencyYearSequence = this.getProjectRoleAgencyYearExitSequence(
       options,
     );
@@ -341,6 +398,7 @@ export default class ShowcaseController extends BaseController {
       frameSequence,
       projectNameSequence,
       projectButtonSequence,
+      projectImageSequence,
       projectRoleAgencyYearSequence,
     ].filter(e => e.length);
 

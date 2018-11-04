@@ -78,7 +78,7 @@ module.exports = {
       },
       // IMAGES
       {
-        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(jpe?g|png|gif|woff|woff2|otf|eot|ttf|svg)$/,
         loader: "file-loader",
         options: {
           name: "[path][name].[ext]",

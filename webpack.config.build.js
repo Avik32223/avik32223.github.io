@@ -13,8 +13,5 @@ module.exports = merge(webpackConfig, {
     chunkFilename: "[name].[hash].js",
   },
 
-  plugins: [
-    new CleanWebpackPlugin(["dist"]),
-    new CopyWebpackPlugin([{ from: "public", to: "public" }]),
-  ],
+  plugins: [new CleanWebpackPlugin(["dist"])],
 });
