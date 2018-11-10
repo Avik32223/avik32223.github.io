@@ -14,6 +14,20 @@ $primary-bg: #1b1a25;
   src: url("../fonts/Absolut_Pro_ThinCondensed.otf");
 }
 
+@font-face {
+  font-family: "jam-sessions";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Jam_Sessions.ttf");
+}
+
+@font-face {
+  font-family: "capable-of-love";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Capable_of_Loving.ttf");
+}
+
 html {
   box-sizing: border-box;
 }
@@ -66,6 +80,8 @@ ul {
 html,
 body {
   height: 100%;
+  font-family: source-serif-pro;
+  scroll-behavior: smooth;
 }
 
 .app {

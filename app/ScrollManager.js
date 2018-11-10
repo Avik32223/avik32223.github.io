@@ -114,7 +114,7 @@ export default class ScrollManager {
           this.currentPage = page;
           setTimeout(() => {
             this.lastAnimationTime = null;
-          }, 2000);
+          }, 1000);
         }
       });
     });

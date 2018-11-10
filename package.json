@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=dev webpack-dev-server --progress --mode development --config webpack.config.dev.js",
     "build": "webpack -p --progress --mode production --config webpack.config.build.js",
+    "deploy": "gh-pages -b master -d dist",
     "fix:other": "npm run prettier --write",
     "fix:js": "npm run test:js --fix",
     "fix": "npm run fix:js && npm run fix:other",
@@ -55,6 +56,7 @@
     "eslint-config-prettier": "3.1.0",
     "eslint-plugin-prettier": "3.0.0",
     "file-loader": "2.0.0",
+    "gh-pages": "^2.0.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "3.2.0",
     "husky": "1.1.2",
@@ -62,6 +64,7 @@
     "node-sass": "4.9.3",
     "prettier": "1.14.3",
     "sass-loader": "7.1.0",
+    "source-map-explorer": "^1.6.0",
     "style-loader": "0.23.1",
     "url-loader": "1.1.1",
     "webpack": "4.20.2",
